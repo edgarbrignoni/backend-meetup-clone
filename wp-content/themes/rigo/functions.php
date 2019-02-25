@@ -18,3 +18,6 @@ require('setup_api.php');
 
 //including any monolitic tempaltes
 require('setup_templates.php');
+
+//add image support for all type of posts
+add_theme_support( 'post-thumbnails' );

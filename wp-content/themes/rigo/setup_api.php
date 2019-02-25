@@ -10,11 +10,25 @@ $api = new \WPAS\Controller\WPASAPIController([
     'allow-origin' => '*',
     'allow-methods' => 'GET,POST,PUT'
 ]);
-
-
 /**
  * Then you can start adding each endpoint one by one
 */
-$api->get([ 'path' => '/courses', 'controller' => 'SampleController:getDraftCourses' ]); 
-$api->get([ 'path' => '/animals', 'controller' => 'SampleController:getDraftAnimals' ]); 
-$api->get([ 'path' => '/trainings', 'controller' => 'SampleController:getDraftTrainings' ]); 
+$api->get([ 
+    'path' => '/samples', 
+    'controller' => 'SampleController:getAllSamples' 
+]); 
+
+$api->put([ 
+    'path' => '/samples', 
+    'controller' => 'SampleController:putNewSample'
+]);
+
+$api->get([ 
+    'path' => '/meetups', 
+    'controller' => 'MeetupController:getAllMeetups' 
+]);
+
+$api->get([ 
+    'path' => '/events', 
+    'controller' => 'EventController:getAllEvents' 
+]); 
