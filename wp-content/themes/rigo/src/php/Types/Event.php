@@ -50,6 +50,29 @@ class Event extends BasePostType{
         			'append' => '',
         			'maxlength' => '',
         		),
+        		array(
+        			'key' => 'field_5c7c1c163e828',
+        			'label' => 'Meetup ID',
+        			'name' => 'meetup_id',
+        			'type' => 'relationship',
+        			'instructions' => '',
+        			'required' => 1,
+        			'conditional_logic' => 0,
+        			'wrapper' => array(
+        				'width' => '',
+        				'class' => '',
+        				'id' => '',
+        			),
+        			'post_type' => array(
+        				0 => 'meetup',
+        			),
+        			'taxonomy' => '',
+        			'filters' => '',
+        			'elements' => '',
+        			'min' => '',
+        			'max' => '',
+        			'return_format' => 'object',
+        		),
         	),
         	'location' => array(
         		array(
