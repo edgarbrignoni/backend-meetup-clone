@@ -55,7 +55,7 @@ class SampleController{
         }
     
         $post_arr = array(
-            //"ID"           => $data["id"],
+            "ID"           => $data["id"],
             "post_title"   => $data["title"],
             "post_content" => $data["content"],
             "post_status"  => "publish",
