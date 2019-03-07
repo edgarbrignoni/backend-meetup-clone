@@ -21,3 +21,13 @@ require('setup_templates.php');
 
 //add image support for all type of posts
 add_theme_support( 'post-thumbnails' );
+
+add_filter( 'rest_endpoints', function( $endpoints ){
+    if ( isset( $endpoints['/wp/v2/users'] ) ) {
+        unset( $endpoints['/wp/v2/users'] );
+    }
+    if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) {
+        unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
+    }
+    return $endpoints;
+});
