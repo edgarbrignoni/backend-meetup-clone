@@ -9,8 +9,8 @@ class MeetupController{
     
     public function getAllMeetups(){
         $query = Meetup::all([
-            'post_status' => 'private'
-            //'posts_per_page' => 9
+            // 'post_status' => 'private'
+            // 'posts_per_page' => 9
         ]);
         
         if ( $query->have_posts() ) {
